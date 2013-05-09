@@ -11,7 +11,9 @@ exports.mrpage = function(req, res) {
     res.send('Hello I am Mr. Page');
 };
 exports.anypage = function(req, res){
-    res.send('Welcome to the ' + req.params.page + ' page');
+    var subpage = req.params[0];
+    var parentPage = subpage ?  ' of the ' + req.params.page + ' page' : '';
+    res.send('Welcome to the ' + (subpage || req.params.page) + ' page' + parentPage);
     
 };
 exports.anypageAdmin = function(req, res) {
