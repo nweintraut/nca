@@ -36,7 +36,7 @@ app.configure('production', function(){
 
 app.get('/', routes.index);
 app.get('/page', routes.mrpage);
-app.get('/:page/*', routes.anypage);
+app.get('/:page/*git add .', routes.anypage);
 // Limit route to those with only letters in it.
 app.get('/:page([a-zA-Z]+)', routes.anypage);
 
